@@ -3,7 +3,7 @@
  * Most of these are inherited from Base, but I want to change a few.
  */
  body {
-    color: #526066;
+    color: #413628;
     font-family: pf-marlet-display, sans-serif;
     font-style: normal;
   }
@@ -43,7 +43,6 @@
   .pure-menu-heading {
 
     /* background-image: url(./img/rv.svg); */
-    fill: #413628;
     background-repeat: no-repeat;
     background-size: auto;
 
@@ -55,11 +54,12 @@
   }
 
   .header-svg{
-    height: 15%; 
-    width: 15%; 
+    height: 10%; 
+    width: 10%; 
     display: block;
     margin-left: auto;
     margin-right: auto;
+    filter: invert(17%) sepia(22%) saturate(835%) hue-rotate(354deg) brightness(90%) contrast(82%);
   }
 
   .pure-menu-link {
@@ -88,13 +88,11 @@
   }
   
   .banner-head {
-    display: table-cell;
     vertical-align: middle;
-    margin-bottom: 0;
-    font-size: 2em;
-    color: white;
-    font-weight: 500;
-    text-shadow: 0 1px 1px black;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    margin-top: 0;
   }
   
   /*
@@ -224,7 +222,7 @@
    */
   @media (min-width: 767px) {
     .banner-head {
-      font-size: 4em;
+      font-size: 3em;
     }
     .pricing-table {
       margin-bottom: 0;
@@ -235,11 +233,16 @@
    * -- PHONE MEDIA QUERIES --
    * On phones, we want to reduce the height and font-size of the banner further
    */
-  @media (min-width: 480px) {
+  @media (min-width: 380px) {
     .banner {
-      height: 400px;
+      height: 200px;
     }
     .banner-head {
-      font-size: 3em;
+      font-size: 2em;
+    }
+
+    .header-svg{
+      height: 20%; 
+      width: 20%; 
     }
   }
