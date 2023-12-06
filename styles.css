@@ -42,7 +42,8 @@
   
   .pure-menu-heading {
 
-    background-image: url(./img/rv.svg);
+    /* background-image: url(./img/rv.svg); */
+    fill: #413628;
     background-repeat: no-repeat;
     background-size: auto;
 
@@ -51,6 +52,14 @@
     
     padding: 0.5em 4em;
     block-size: 100px;
+  }
+
+  .header-svg{
+    height: 15%; 
+    width: 15%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .pure-menu-link {
@@ -66,7 +75,7 @@
   
   .banner {
     background: transparent
-      url("./img/230628-083644.jpg")
+      url("./img/230628-083644.webp")
       0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
