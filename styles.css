@@ -75,7 +75,7 @@
   
   .banner {
     background: transparent
-      url("./img/230628-083644.webp")
+      url("./img/231023-053.webp")
       0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
@@ -123,11 +123,18 @@
    * Choose a different color based on the type of pricing table.
    */
   .pricing-table-free .pricing-table-header {
-    background: #519251;
+    color: #413628;
+    background: url("./img/230628-084016x263861.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+
   }
   
   .pricing-table-biz .pricing-table-header {
-    background: #2c4985;
+    color: #413628;
+    background: url("./img/230628-083644.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   /*
@@ -135,8 +142,10 @@
    * By default, a header is black/white, and has some styles for its <h2> name.
    */
   .pricing-table-header {
-    background: #111;
+    background: #413628;
     color: #fff;
+    text-shadow: 0 1px 1px black;
+
   }
   .pricing-table-header h2 {
     margin: 0;
@@ -160,8 +169,8 @@
     font-size: 0.2em;
     padding-bottom: 2em;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.5);
-    *color: #fff;
+    color: #fff;
+    text-shadow: 0 1px 1px black;
   }
   
   /*
@@ -220,8 +229,11 @@
    * text and add some vertical space between the various pricing tables
    */
   @media (min-width: 767px) {
-    .banner-head {
-      font-size: 3em;
+
+    .banner {
+      height: 400px;
+      padding: 0%;
+      background-attachment: scroll;
     }
     .pricing-table {
       margin-bottom: 0;
@@ -232,10 +244,13 @@
    * -- PHONE MEDIA QUERIES --
    * On phones, we want to reduce the height and font-size of the banner further
    */
-  @media (min-width: 380px) {
+  @media (min-width: 370px) {
     .banner {
-      height: 500px;
+      height: 20em;
+      width: -webkit-fill-available;
       padding: 0%;
+      background-size: cover;
+      background-attachment: scroll;
     }
     .banner-head {
       font-size: 2em;
@@ -246,3 +261,21 @@
       width: 20%; 
     }
   }
+
+  @media (min-width: 1200px) {
+    .banner {
+      height: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      background-attachment: fixed;
+      background-size: 100%;
+    }
+    .banner-head {
+      font-size: 2em;
+    }
+
+    .header-svg{
+      height: 10%; 
+      width: 10%; 
+    }
+}
