@@ -75,7 +75,7 @@
   
   .banner {
     background: transparent
-      url("https://drive.google.com/uc?id=17Y1nAuj_kYs97QmhQhHqA7AtVthoGSW9")
+      url("./img/231023-053.webp")
       0 0 no-repeat fixed;
     text-align: center;
     background-size: cover;
@@ -123,15 +123,17 @@
    * Choose a different color based on the type of pricing table.
    */
   .pricing-table-free .pricing-table-header {
-    color: #413628;
-    background: url("./img/230628-084016x263861.webp");
+    color: #fff;
+    text-shadow: 0 1px 1px black;
+    background: url("./img/230628-062444x188761.webp");
     background-repeat: no-repeat;
     background-size: cover;
 
   }
   
   .pricing-table-biz .pricing-table-header {
-    color: #413628;
+    color: #fff;
+    text-shadow: 0 1px 1px black;
     background: url("./img/230628-083644.webp");
     background-repeat: no-repeat;
     background-size: cover;
@@ -142,7 +144,9 @@
    * By default, a header is black/white, and has some styles for its <h2> name.
    */
   .pricing-table-header {
-    background: #413628;
+    background: url("./img/230628-070951x217561.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;
     text-shadow: 0 1px 1px black;
 
