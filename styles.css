@@ -270,20 +270,35 @@
     }
   }
 
-  @media (min-width: 1200px) {
-    .banner {
-      height: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      background-attachment: fixed;
-      background-size: 100%;
-    }
-    .banner-head {
-      font-size: 2em;
-    }
+@media (min-width: 1200px) {
 
+    .banner {
+      height: 30em;
+      padding: 0%;
+      background-size: cover;
+      background-attachment: scroll;
+      background-position: top;
+    }
     .header-svg{
       height: 10%; 
       width: 10%; 
     }
+}
+
+@media (min-width: 2500px) {
+  .banner {
+    height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background-attachment: fixed;
+    background-size: 100%;
+  }
+  .banner-head {
+    font-size: 2em;
+  }
+
+  .header-svg{
+    height: 10%; 
+    width: 10%; 
+  }
 }
