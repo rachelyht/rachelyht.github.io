@@ -129,7 +129,7 @@
     box-shadow: inset 0 0 0 1000px rgb(65, 54, 40, .2);
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-position: center;
   }
   
   .pricing-table-biz .pricing-table-header {
@@ -139,6 +139,7 @@
     box-shadow: inset 0 0 0 1000px rgb(65, 54, 40, .4);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
   }
   
   /*
@@ -152,6 +153,7 @@
     background-size: cover;
     color: #fff;
     text-shadow: 0 1px 1px black;
+    background-position: center;
 
   }
   .pricing-table-header h2 {
