@@ -258,6 +258,7 @@
       padding: 0%;
       background-size: cover;
       background-attachment: scroll;
+      background-position: center;
     }
     .banner-head {
       font-size: 2em;
