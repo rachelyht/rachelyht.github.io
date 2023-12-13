@@ -242,6 +242,10 @@
       padding: 0%;
       background-attachment: scroll;
     }
+    .header-svg{
+      height: 10%; 
+      width: 10%; 
+    }
     .pricing-table {
       margin-bottom: 0;
     }
