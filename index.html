@@ -170,10 +170,13 @@
     const slideshowImages = [];
     
     // Add all 22 images from the slideshow directory
-    for(let i = 0; i <= 21; i++) {
+    // Note: Using RachelVictor_00.jpg instead of RachelVictor_21.jpg as requested
+    for(let i = 0; i <= 20; i++) {
       const imageNumber = i.toString().padStart(2, '0');
       slideshowImages.push(`./slideshow/RachelVictor_${imageNumber}.jpg`);
     }
+    // Add RachelVictor_00.jpg at the end of the slideshow
+    slideshowImages.push(`./slideshow/RachelVictor_00.jpg`);
     
     // Create slides dynamically
     const slideshowContainer = document.querySelector('.slideshow-container');
