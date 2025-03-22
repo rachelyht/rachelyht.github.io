@@ -178,6 +178,20 @@
     // Create slides dynamically
     const slideshowContainer = document.querySelector('.slideshow-container');
     
+    // Add navigation buttons
+    const prevButton = document.createElement('a');
+    prevButton.className = 'prev';
+    prevButton.innerHTML = '&#10094;';
+    prevButton.onclick = function() { changeSlide(-1); };
+    
+    const nextButton = document.createElement('a');
+    nextButton.className = 'next';
+    nextButton.innerHTML = '&#10095;';
+    nextButton.onclick = function() { changeSlide(1); };
+    
+    slideshowContainer.appendChild(prevButton);
+    slideshowContainer.appendChild(nextButton);
+    
     slideshowImages.forEach((imagePath, index) => {
       const slide = document.createElement('div');
       slide.className = 'slide fade';
@@ -192,6 +206,7 @@
     
     // Slideshow functionality
     let slideIndex = 0;
+    let slideTimer;
     
     function showSlides() {
       const slides = document.getElementsByClassName("slide");
@@ -207,7 +222,35 @@
       }
       
       slides[slideIndex-1].style.display = "block";  
-      setTimeout(showSlides, 5000); // Change image every 5 seconds
+      slideTimer = setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+    
+    function changeSlide(n) {
+      // Clear the automatic timer when user manually changes slides
+      clearTimeout(slideTimer);
+      
+      const slides = document.getElementsByClassName("slide");
+      
+      // Hide all slides
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      
+      // Update slide index
+      slideIndex += n;
+      
+      // Handle wrapping around at the ends
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      } else if (slideIndex < 1) {
+        slideIndex = slides.length;
+      }
+      
+      // Show the current slide
+      slides[slideIndex-1].style.display = "block";
+      
+      // Restart the timer
+      slideTimer = setTimeout(showSlides, 5000);
     }
     
     // Start the slideshow when the page loads
