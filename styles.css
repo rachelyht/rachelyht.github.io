@@ -183,6 +183,11 @@
     flex-grow: 1;
   }
   
+  /* Add specific margin to pricing-table-free */
+  .pricing-table-free {
+    margin-right: 2em;
+  }
+  
   /*
    * -- PRICING TABLE HEADER COLORS --
    * Choose a different color based on the type of pricing table.
