@@ -75,7 +75,7 @@
   .banner {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2em;
+    margin-top: 0.5em;
     text-align: center;
     width: 100%;
     margin-bottom: 3em;
@@ -96,6 +96,7 @@
 
   .slide img {
     width: 100%;
+    aspect-ratio: 3/1;
     object-fit: cover;
   }
 
@@ -168,8 +169,23 @@
    */
   .pricing-table {
     border: 1px solid #ddd;
-    margin: 0 0.5em 2em;
+    margin: 0 1em 2em;
     padding: 0 0 3em;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Ensure pricing table list takes up available space */
+  .pricing-table-list {
+    flex-grow: 1;
+  }
+  
+  /* Add specific margin to pricing-table-free */
+  .pricing-table-free {
+    margin-right: 2em;
   }
   
   /*
@@ -191,6 +207,16 @@
     text-shadow: 0 1px 1px black;
     background: url("./img/230628-083644.webp");
     box-shadow: inset 0 0 0 1000px rgb(65, 54, 40, .4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .pricing-table-on-the-day .pricing-table-header {
+    color: #fff;
+    text-shadow: 0 1px 1px black;
+    background: url("./img/231023-053.webp");
+    box-shadow: inset 0 0 0 1000px rgb(65, 54, 40, .3);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -303,7 +329,7 @@
     }
 
     .slide img {
-      height: 400px;
+      aspect-ratio: 3/1;
       object-position: center;
     }
     .header-svg{
@@ -327,7 +353,7 @@
     }
 
     .slide img {
-      height: 20em;
+      aspect-ratio: 3/1;
       object-fit: cover;
       object-position: center;
     }
@@ -339,6 +365,11 @@
       height: 20%; 
       width: 20%; 
     }
+    
+    .pricing-table {
+      margin: 0 2em 2em;
+      width: 90%;
+    }
   }
 
 @media (min-width: 1200px) {
@@ -349,7 +380,7 @@
     }
 
     .slide img {
-      height: 30em;
+      aspect-ratio: 3/1;
       object-fit: cover;
       object-position: center top;
     }
@@ -365,7 +396,7 @@
   }
 
   .slide img {
-    height: 40em;
+    aspect-ratio: 3/1;
     object-fit: cover;
     object-position: center top;
   }
