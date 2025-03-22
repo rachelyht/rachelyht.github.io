@@ -224,6 +224,10 @@
       img.src = imagePath;
       img.alt = `Rachel and Victor Wedding Photo ${index + 1}`;
       
+      // Set explicit width and height to maintain 3:1 aspect ratio in Safari
+      img.style.width = '100%';
+      img.style.height = 'calc(100vw / 3)'; // Width divided by 3 for 3:1 ratio
+      
       slide.appendChild(img);
       slideshowContainer.appendChild(slide);
     });

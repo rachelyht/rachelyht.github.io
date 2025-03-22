@@ -97,7 +97,8 @@
 
   .slide img {
     width: 100%;
-    aspect-ratio: 3/1;
+    aspect-ratio: 3/1; /* Keep this for browsers that support it */
+    height: calc(100vw / 3); /* Explicit height calculation for Safari */
     object-fit: contain;
     background-color: #f7f7f7; /* Light background for padding areas */
   }
@@ -141,6 +142,22 @@
   @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
+  }
+  
+  /* Safari-specific fixes for aspect ratio */
+  @media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        .slide img {
+            height: calc(100vw / 3); /* Force height calculation in Safari */
+            max-height: calc(980px / 3); /* Limit height for larger screens based on max content width */
+        }
+        
+        @media screen and (max-width: 980px) {
+            .slide img {
+                height: calc(100vw / 3); /* Responsive height for smaller screens */
+            }
+        }
+    }
   }
   
   .banner-head {
