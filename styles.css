@@ -75,15 +75,69 @@
   .banner {
     margin-left: auto;
     margin-right: auto;
-    background: transparent
-      url("./img/231023-053.webp")
-      0 0 no-repeat fixed;
+    margin-top: 2em;
     text-align: center;
-    background-size: cover;
     width: 100%;
     margin-bottom: 3em;
-    display: table;
-    background-position: top;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+
+  .slide {
+    display: none;
+    width: 100%;
+  }
+
+  .slide img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Navigation buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
   }
   
   .banner-head {
@@ -242,7 +296,15 @@
     .banner {
       height: 400px;
       padding: 0%;
-      background-attachment: scroll;
+    }
+
+    .slideshow-container {
+      height: 100%;
+    }
+
+    .slide img {
+      height: 400px;
+      object-position: center;
     }
     .header-svg{
       height: 10%; 
@@ -262,9 +324,12 @@
       height: 20em;
       width: -webkit-fill-available;
       padding: 0%;
-      background-size: cover;
-      background-attachment: scroll;
-      background-position: center;
+    }
+
+    .slide img {
+      height: 20em;
+      object-fit: cover;
+      object-position: center;
     }
     .banner-head {
       font-size: 2em;
@@ -281,10 +346,12 @@
     .banner {
       height: 30em;
       padding: 0%;
-      background-attachment: scroll;
-      background-size: auto 100%;
-      background-repeat: no-repeat;
-      background-position: center top;
+    }
+
+    .slide img {
+      height: 30em;
+      object-fit: cover;
+      object-position: center top;
     }
     .header-svg{
       height: 8%; 
@@ -294,11 +361,13 @@
 
 @media (min-width: 2500px) {
   .banner {
-    background-attachment: fixed;
-    background-size: auto 80%;
-    background-repeat: no-repeat;
-    background-position: center top;
     height: 40em;
+  }
+
+  .slide img {
+    height: 40em;
+    object-fit: cover;
+    object-position: center top;
   }
   .banner-head {
     font-size: 2em;
