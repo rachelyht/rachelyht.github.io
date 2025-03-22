@@ -87,6 +87,7 @@
     width: 100%;
     position: relative;
     margin: auto;
+    text-align: center; /* Center the images */
   }
 
   .slide {
@@ -97,7 +98,8 @@
   .slide img {
     width: 100%;
     aspect-ratio: 3/1;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: #f7f7f7; /* Light background for padding areas */
   }
 
   /* Navigation buttons */
@@ -330,6 +332,7 @@
 
     .slide img {
       aspect-ratio: 3/1;
+      object-fit: contain;
       object-position: center;
     }
     .header-svg{
@@ -354,7 +357,7 @@
 
     .slide img {
       aspect-ratio: 3/1;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
     }
     .banner-head {
@@ -381,8 +384,8 @@
 
     .slide img {
       aspect-ratio: 3/1;
-      object-fit: cover;
-      object-position: center top;
+      object-fit: contain;
+      object-position: center;
     }
     .header-svg{
       height: 8%; 
@@ -397,8 +400,8 @@
 
   .slide img {
     aspect-ratio: 3/1;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center;
   }
   .banner-head {
     font-size: 2em;
