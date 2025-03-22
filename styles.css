@@ -196,6 +196,16 @@
     background-position: center;
   }
   
+  .pricing-table-on-the-day .pricing-table-header {
+    color: #fff;
+    text-shadow: 0 1px 1px black;
+    background: url("./img/230628-070951x217561.webp");
+    box-shadow: inset 0 0 0 1000px rgb(65, 54, 40, .3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
   /*
    * -- PRICING TABLE HEADER --
    * By default, a header is black/white, and has some styles for its <h2> name.
