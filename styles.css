@@ -169,7 +169,7 @@
    */
   .pricing-table {
     border: 1px solid #ddd;
-    margin: 0 0.5em 2em;
+    margin: 0 1em 2em;
     padding: 0 0 3em;
     height: 500px;
     width: 280px;
@@ -359,6 +359,11 @@
     .header-svg{
       height: 20%; 
       width: 20%; 
+    }
+    
+    .pricing-table {
+      margin: 0 2em 2em;
+      width: 90%;
     }
   }
 
