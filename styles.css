@@ -170,6 +170,15 @@
     border: 1px solid #ddd;
     margin: 0 0.5em 2em;
     padding: 0 0 3em;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Ensure pricing table list takes up available space */
+  .pricing-table-list {
+    flex-grow: 1;
   }
   
   /*
